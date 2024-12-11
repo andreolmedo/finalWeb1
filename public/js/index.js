@@ -63,10 +63,21 @@ async function editarLivro(id) {
 formularioLivro.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  const titulo = document.getElementById('titulo').value;
+  const autor = document.getElementById('autor').value;
+  const ano = document.getElementById('ano').value;
+
+  const anoAtual = new Date().getFullYear();
+
+  if (ano > anoAtual) {
+    alert('Data Invalida.');
+    return;
+  }
+
   const livro = {
-    titulo: document.getElementById('titulo').value,
-    autor: document.getElementById('autor').value,
-    ano: document.getElementById('ano').value,
+    titulo,
+    autor,
+    ano
   };
 
   if (livroEditando) {
