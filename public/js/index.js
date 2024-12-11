@@ -1,7 +1,6 @@
 const scrollDownBtn = document.getElementById('scrollDownBtn');
 const cadastroSection = document.getElementById('cadastro');
 
-// Função para rolar suavemente para a seção de cadastro
 scrollDownBtn.addEventListener('click', () => {
   cadastroSection.scrollIntoView({ behavior: 'smooth' });
 });
@@ -9,7 +8,6 @@ scrollDownBtn.addEventListener('click', () => {
 const formularioLivro = document.getElementById('formulario-livro');
 const listaLivros = document.getElementById('lista-livros');
 
-// Função para buscar livros
 async function buscarLivros() {
   const response = await fetch('/api/livros');
   const livros = await response.json();
@@ -28,7 +26,6 @@ async function buscarLivros() {
   });
 }
 
-// Função para adicionar livro
 async function adicionarLivro(livro) {
   const response = await fetch('/api/livros', {
     method: 'POST',
@@ -43,7 +40,6 @@ async function adicionarLivro(livro) {
   }
 }
 
-// Função para deletar livro
 async function deletarLivro(id) {
   await fetch(`/api/livros/${id}`, { method: 'DELETE' });
   buscarLivros();
@@ -51,7 +47,6 @@ async function deletarLivro(id) {
 
 let livroEditando = null;
 
-// Função para editar livro
 async function editarLivro(id) {
   const response = await fetch('/api/livros');
   const livros = await response.json();
@@ -65,7 +60,6 @@ async function editarLivro(id) {
   }
 }
 
-// Evento de submit do formulário
 formularioLivro.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -90,5 +84,4 @@ formularioLivro.addEventListener('submit', async (e) => {
   buscarLivros();
 });
 
-// Chama a função para buscar livros ao iniciar
 buscarLivros();
