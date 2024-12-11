@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/fundo.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header {
+  text-align: center;
+  padding: 50px;
+  color: white;
+  height: 200vh; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#scrollDownBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #7700ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#scrollDownBtn:hover {
+  background-color: #241158;
+}
+
+.container {
+  max-width: 800px;
+  margin-top: 50px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-50%);
+  margin-bottom: 400px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #388E3C; 
+}
+
+button.editar {
+  background-color: #f1c40f; 
+}
+
+button.editar:hover {
+  background-color: #e0b90f;
+}
+
+button.deletar {
+  background-color: #d9534f;
+}
+
+button.deletar:hover {
+  background-color: #c9302c;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+a {
+  color: #7700ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
